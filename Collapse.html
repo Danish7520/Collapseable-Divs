@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Two Buttons OnClick Collapse</h1>
+
+    <button id="button" type="button" class="btn btn-primary"  data-target="#demo">
+      <span class="glyphicon glyphicon-collapse-down"></span> Show
+    </button>
+    
+    <div id="wrapper" class="col1">
+      <ol class="list-group">
+          <li class="list-group-item">Muneeb Ahmed Mashwani</li>
+          <li class="list-group-item">Chaipi Master</li>
+          <li class="list-group-item">Micromerger</li>
+      </ol>
+    </div>
+    
+    <h1>Two Buttons OnClick Collapse</h1>
+
+    <button id="button1" type="button" class="btn btn-primary"data-target="#demo1">
+            <span class="glyphicon glyphicon-collapse-down"></span>Show
+    </button>
+    
+    <div id="wrapper1" class="col2">
+      <ol class="list-group">
+          <li class="list-group-item">Muhammad Danish Nawaz</li>
+          <li class="list-group-item">Internee</li>
+          <li class="list-group-item">Micromerger</li>
+      </ol>
+    </div>
+    
+
+
+    
+  </body>
+  <script>
+var a=true;
+$('#wrapper').hide();
+$('#wrapper1').hide();
+// if($('#wrapper').hide()){
+//     alert('your message');
+  
+// }
+
+$('#button').click(function(){
+    $(this).data('clicked', true);
+    if($('#button').data('clicked')) {
+        $('#wrapper').toggle();
+        $('#wrapper1').hide();
+}
+    
+
+    
+    });
+    $('#button1').click(function(){
+    $(this).data('clicked', true);
+    if($('#button1').data('clicked')) {
+        $('#wrapper1').toggle();
+        $('#wrapper').hide();
+}
+    
+
+    
+    });
+   
+
+
+  </script>
+</html>
